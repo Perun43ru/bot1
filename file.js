@@ -8,7 +8,7 @@
 // @match        https://xn----7sbab5aqcbiddtdj1e1g.xn--p1ai/*
 // @grant        none
 // ==/UserScript==
-let yInput = document.getElementById('elem')[0];
+let yInput = document.getElementByName('text')[0];
 let bt = document.getElementsByName ('bt')[i];
 let s = 'Гобой';
 let i = 0;
