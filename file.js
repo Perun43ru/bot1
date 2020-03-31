@@ -1,4 +1,4 @@
-/ ==UserScript==
+// ==UserScript==
 // @name         New Userscript
 // @namespace    http://tampermonkey.net/
 // @version      0.1
@@ -8,7 +8,7 @@
 // @match        https://xn----7sbab5aqcbiddtdj1e1g.xn--p1ai/*
 // @grant        none
 // ==/UserScript==
-let yInput = document.getElementByName("id='text'")[0];
+let yInput = document.getElementById('elem')[0];
 let bt = document.getElementsByName ('bt')[i];
 let s = 'Гобой';
 let i = 0;
@@ -42,7 +42,6 @@ else{
 function getRandom(min, max){
     return Math.floor(Math.random()*(max-min)+min);
 }
-
 
 
 
