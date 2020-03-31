@@ -9,15 +9,15 @@
 // @grant        none
 // ==/UserScript==
 
-let yandexInput = document.getElementsByName('text')[0];
-let btn=document.getElementsByClassName("button_theme_websearch")[0];//либо кнопка либо undefine
-let searchW="Гобой";
+let yInput = document.getElementsByName('text')[0];
+let btn=document.getElementsByClassName("button_theme_websearch")[0];
+let searchW = "Гобой";
 let i=0;
-let links=document.links;
+let links = document.links;
 
-if (btn!=undefined)
+if (btn != undefined)
 {
-  let timerId=setInterval(()=>
+  let timerId = setInterval(()=>
       {
         yandexInput.value+=searchW[i];
         i++;
@@ -28,16 +28,14 @@ if (btn!=undefined)
         }
       },500);
 } else
-  if (location.hostname=="yandex.ru")
+  if (location.hostname == "yandex.ru")
 {
-for (let i=0;i<links.length; i++)
+for (let i = 0; i<links.length; i++)
   {
     if (links[i].href.indexOf('https://xn----7sbab5aqcbiddtdj1e1g.xn--p1ai/')!=-1)
     {
         links[i].removeAttribute("target");
-     //   console.log(a);
-        links[i].click();   //
-
+        links[i].click();   
         break;
     }
    }
